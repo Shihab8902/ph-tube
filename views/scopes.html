@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS variable scopes</title>
+    <!-- Daisy UI and Tailwind CSS cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Inter font cdn -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <!-- Vanilla CSS styles -->
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="container mx-auto">
+
+    <section class="p-8">
+        <h1 class="text-4xl font-bold text-center mb-16">The scopes of JavaScript Variables (var, let, const)</h1>
+
+        <article class="text-lg font-medium">
+            <i class="fa-solid fa-square"></i>
+            In JavaScript, the keywords var, let, and const are used for variable declaration, but they have different
+            scopes and behaviors. Understanding their scopes is crucial for writing maintainable and bug-free code.
+            Let's discuss the scope of each of these variable declaration keywords:
+        </article>
+
+        <div>
+            <article class="text-lg font-medium my-12 md:ml-9">
+                <p class="text-2xl"> 1. "var" scope:</p>
+                <p class="md:ml-14 mt-4">Variables declared with 'var' have function scope or global scope, depending on
+                    where
+                    they
+                    are declared.
+                    This means that the variable is accessible throughout the entire function in which it is declared or
+                    at
+                    the global level if declared outside any function.</p>
+            </article>
+
+            <div class="md:w-3/4 mx-auto">
+                <img class="rounded-lg md:rounded-2xl lg:rounded-3xl w-full" src="../images/snippet1.png"
+                    alt="Image unavailable">
+            </div>
+
+            <p class="text-lg font-medium mt-7">In the above example, even though the var x declaration is inside an if
+                block,
+                it's still accessible outside
+                of that block because of its function scope.</p>
+        </div>
+
+
+
+        <div>
+            <article class="text-lg font-medium my-20 md:ml-9">
+                <p class="text-2xl"> 2. "let" scope:</p>
+                <p class="md:ml-14 mt-4">Variables declared with let have block scope. This means that they are confined
+                    to
+                    the block in which they are defined, such as within loops, conditionals, or any pair of curly braces
+                    {}.</p>
+            </article>
+
+            <div class="md:w-3/4 mx-auto">
+                <img class="rounded-lg  md:rounded-2xl lg:rounded-3xl w-full" src="../images/snippet2.png"
+                    alt="Image unavailable">
+            </div>
+
+            <p class="text-lg font-medium mt-7">In this example, the let y variable is accessible only within the if
+                block where it's defined.</p>
+        </div>
+
+
+
+
+        <div>
+            <article class="text-lg font-medium my-20 md:ml-9">
+                <p class="text-2xl"> 3. "const" scope:</p>
+                <p class="md:ml-14 mt-4">Variables declared with const also have block scope like let. However, they
+                    additionally have the characteristic of being immutable, meaning their value cannot be re-assigned
+                    after the initial assignment.</p>
+            </article>
+
+            <div class="w-3/4 mx-auto">
+                <img class="rounded-lg md:rounded-2xl lg:rounded-3xl w-full" src="../images/snippet3.png"
+                    alt="Image unavailable">
+            </div>
+
+            <p class="text-lg font-medium mt-7">The const z variable is accessible only within the function it's
+                defined, and its value cannot be changed after initialization.</p>
+        </div>
+
+
+    </section>
+
+
+    <section class="mt-9 md:ml-9 p-5 ">
+        <p class="text-2xl font-semibold">In summary: </p>
+
+        <ul class="list-disc  font-medium ml-5 md:ml-12 lg:ml-20 my-6">
+            <li class="mb-2">'var' has function scope or global scope.</li>
+            <li class="mb-2">'let' and 'const' have block scope.</li>
+            <li class="mb-2">'const' variables are also immutable, meaning their values cannot be changed after
+                assignment.</li>
+        </ul>
+
+        <p class="font-medium">When choosing which keyword to use, it's generally recommended to use let and const over
+            var because they
+            provide more predictable scoping behavior and help prevent unintended bugs caused by variable hoisting and
+            improper scoping. The choice between let and const depends on whether you need the variable to be mutable or
+            not.</p>
+    </section>
+
+
+</body>
+
+</html>
