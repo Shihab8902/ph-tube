@@ -8,13 +8,15 @@ const getCategories = async () => {
 
 
 
+
+
 //Get data from API by category
 const getByCategory = (buttonInfo) => {
     const buttonContainer = document.querySelector("#buttonContainer");
 
     buttonInfo.forEach(btn => {
         const button = document.createElement("button");
-        button.classList = `font-semibold text-lg text-[#000000b0] bg-[#25252526] py-2 px-5 rounded-md`;
+        button.classList = `btn-red font-semibold text-lg text-[#000000b0] bg-[#25252526] py-2 px-5 rounded-md`;
         button.innerText = btn.category;
         button.onclick = () => {
             getDataBasedOnCategory(btn.category_id);
@@ -28,24 +30,34 @@ const getByCategory = (buttonInfo) => {
 
 
 //Render data on the ui based on button click
-const getDataBasedOnCategory = async (id) => {
+const getDataBasedOnCategory = async (id = "1000") => {
     const res = await fetch(`https://openapi.programming-hero.com/api/videos/category/${id}`);
     const dataObj = await res.json();
     const data = dataObj.data;
+    document.querySelector("#sortButton").addEventListener("click", () => {
+        data.sort((first, second) => {
+            return parseFloat(second.others.views.split("K")[0]) - parseFloat(first.others.views.split("K")[0]);
+        });
+        renderData(data);
+    });
     renderData(data);
 }
 
 
 
 
+
+
 //Render data
 const renderData = (data) => {
+    console.log(data)
     const videoContainer = document.querySelector("#videoContainer");
     videoContainer.innerText = '';
+
     if (data.length < 1) {
         videoContainer.innerHTML = `
             <div class="text-center my-10">
-                <img class="mx-auto" src="images/Icon.png" alt="" />
+                <img class="mx-auto mb-6" src="images/Icon.png" alt="" />
                 <h3 class="font-bold text-3xl">Oops!! Sorry, There is no <br/> content here</h3>
             </div>
         
@@ -109,16 +121,5 @@ const convertSeconds = (sec) => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 getCategories();
+getDataBasedOnCategory();
