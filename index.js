@@ -42,9 +42,19 @@ const getDataBasedOnCategory = async (id) => {
 const renderData = (data) => {
     const videoContainer = document.querySelector("#videoContainer");
     videoContainer.innerText = '';
+    if (data.length < 1) {
+        videoContainer.innerHTML = `
+            <div class="text-center my-10">
+                <img class="mx-auto" src="images/Icon.png" alt="" />
+                <h3 class="font-bold text-3xl">Oops!! Sorry, There is no <br/> content here</h3>
+            </div>
+        
+        `;
+        videoContainer.classList.remove("grid");
+    }
     data.forEach(video => {
-        console.log(video)
         const videoCard = document.createElement("div");
+        videoContainer.classList.add("grid");
 
         videoCard.innerHTML = `
         <figure class="relative h-64 ">

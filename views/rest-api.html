@@ -28,70 +28,59 @@
 
         <p class="font-medium ">
 
-            REST API stands for "Representational State Transfer Application Programming Interface." It is an
-            architectural style and a set of constraints that are commonly used for designing and creating web services.
-            REST APIs allow different software applications to communicate with each other over the internet by using
-            standard HTTP methods.
+            A REST API is an application programming interface
+            that indicates to the constraints of REST architectural style and allows for interaction with
+            RESTful web services.
         </p>
 
         <p class="font-semibold my-8">Key principles of a REST API include:</p>
 
         <ol>
-            <li class="font-medium mb-5">1. <span class="font-bold">Resources: </span> REST APIs expose resources as
-                URLs
-                (Uniform Resource
-                Locators). A resource
-                could be any piece of data or object, such as users, products, posts, etc.</li>
+            <li class="font-medium mb-5">1. <span class="font-bold">Resources: </span> REST APIs get resources as
+                URLs. A resource can be a piece of data or object.
+            </li>
 
-            <li class="font-medium mb-5">2. <span class="font-bold">HTTP Methods: </span> REST APIs use standard HTTP
-                methods to perform actions on resources:.</li>
+            <li class="font-medium mb-5">2. <span class="font-bold">HTTP Methods: </span>REST APIs use HTTP methods to
+                perform different operation on the web.</li>
 
             <ul class="list-disc ml:5 md:ml-14 my-4">
-                <li class="font-medium mb-2"><span class="font-semibold">GET:</span> Retrieve data from the server
-                    (read).
+                <li class="font-medium mb-2"><span class="font-semibold">GET:</span> Get the data from the server by
+                    sending http request.
                 </li>
-                <li class="font-medium mb-2"><span class="font-semibold">POST:</span> Send data to the server to create
-                    a new
-                    resource (create).
+                <li class="font-medium mb-2"><span class="font-semibold">POST:</span> Send user declared data to the
+                    server to create a new data.
                 </li>
-                <li class="font-medium mb-2"><span class="font-semibold">PUT:</span> Send data to the server to update a
-                    resource (update).
+                <li class="font-medium mb-2"><span class="font-semibold">PUT:</span> Send data to the server to updating
+                    an existing resource.
                 </li>
-                <li class="font-medium mb-2"><span class="font-semibold">DELETE:</span> Delete a resource on the server.
+                <li class="font-medium mb-2"><span class="font-semibold">DELETE:</span> Delete a specific data on the
+                    server.
                 </li>
             </ul>
 
             <li class="font-medium mb-5">3. <span class="font-bold">Statelessness: </span>Each request from a client to
-                the server must contain all the information needed to understand and process that request. The server
-                should not store any client-specific state between requests. Each request should be independent.</li>
+                the server must contain all the information which needed to understand and process that request from the
+                sever.</li>
 
 
-            <li class="font-medium mb-5">4. <span class="font-bold">Uniform Interface: </span>The interactions between
-                clients and servers should be uniform, following a consistent set of rules. This makes it easier to
-                design, develop, and understand APIs.</li>
+            <li class="font-medium mb-5">4. <span class="font-bold">Uniform Interface: </span>The interaction between
+                the client and the server should be uniform and should be perform upon a set of rules.</li>
 
 
-            <li class="font-medium mb-5">5. <span class="font-bold">Representation: </span>Resources can be represented
-                in different formats, such as JSON, XML, HTML, etc. Clients can specify their preferred format using the
-                Accept header in the request.</li>
+            <li class="font-medium mb-5">5. <span class="font-bold">Representation: </span>Resources can be stored in
+                the server in different forms like JSON, XML, HTML etc. The user can send request to get their specific
+                data formate using headers.</li>
 
             <li class="font-medium mb-5">6. <span class="font-bold">Hypermedia as the Engine of Application State
-                    (HATEOAS): </span>This principle suggests that the API should provide links to related resources,
-                guiding the client application's navigation through the API.</li>
+                    (HATEOAS): </span>This principles suggest that the API should be give necessary links to navigate to
+                the API</li>
         </ol>
 
         <p class="font-medium mt-14">
-            REST APIs are widely used in web development to build services that allow different applications to
-            communicate and exchange data. They are platform-independent and can be used by various programming
-            languages and frameworks.
+            REST APIs are widely used in the web development to exchange data from one client to another. The API
+            provides a uniform connection between different clients to send or receive data and use them.
         </p>
 
-        <p class="font-medium mt-5">
-            For example, if you're building a social media application, you might use a REST API to retrieve user
-            profiles, post updates, comment on posts, and perform other related actions. The API endpoints would
-            correspond to these actions, and clients (such as web browsers or mobile apps) would make HTTP requests to
-            these endpoints to interact with the server and retrieve or manipulate data.
-        </p>
 
 
     </section>

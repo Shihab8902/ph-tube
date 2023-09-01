@@ -26,23 +26,21 @@
     <section class="p-8">
         <h1 class="text-4xl font-bold text-center mb-16">null and undefined in JavaScript</h1>
         <p class="font-medium ">
-            In JavaScript, both null and undefined are special values that represent the absence of a meaningful value.
-            While they might seem similar, they have distinct use cases:
+            null and undefined both in JavaScript represents a meaningful absence of a value. While they
+            sounds similar, they have different use cases.
         </p>
 
         <div class="mt-6">
             <h3 class="text-2xl font-semibold">null:</h3>
             <ul class="md:ml-9 my-4 list-disc">
-                <li class="font-medium mb-4">'null' is a deliberate absence of any value or object. It is often used to
-                    indicate that a variable
-                    intentionally holds no value or that an object property deliberately doesn't have a value assigned
-                    to it.</li>
+                <li class="font-medium mb-4">'null' indicates the missing value of variable and object. It is often use
+                    to indicate that a variable has no value and also an object property is empty.</li>
 
                 <li class="font-medium mb-4">'It is used when you want to explicitly set a variable or property to have
                     no value.</li>
 
-                <li class="font-medium mb-4">For example, if you have a variable that should represent an object but
-                    hasn't been initialized yet, you might set it to null to indicate that it's intentionally empty.
+                <li class="font-medium mb-4">For example, If you want to access an object but the object is missing
+                    'null' will indicates that the object is missing intentionally.
                 </li>
             </ul>
         </div>
@@ -50,14 +48,14 @@
         <div class="mt-20">
             <h3 class="text-2xl font-semibold">undefined:</h3>
             <ul class="md:ml-9 my-4 list-disc">
-                <li class="font-medium mb-4">'undefined typically indicates that a variable has been declared but hasn't
-                    been assigned any value, or that an object property hasn't been defined or accessed.</li>
+                <li class="font-medium mb-4">'undefined' typically indicates that the variable is declared but
+                    unassigned, or an object property is not defined or missing.</li>
 
-                <li class="font-medium mb-4">It's often used as the default value of uninitialized variables or function
-                    parameters that are missing.</li>
+                <li class="font-medium mb-4">It's is usually used as unassigned variable default value and also
+                    unassigned function default parameter.</li>
 
-                <li class="font-medium mb-4">It can also be the value returned by a function that doesn't explicitly
-                    return anything (in which case it's equivalent to returning undefined).
+                <li class="font-medium mb-4">It also be a default value of a return function that really does not return
+                    anything.
                 </li>
             </ul>
         </div>
@@ -68,18 +66,15 @@
         <h3 class="font-medium text-3xl">In practice: </h3>
 
         <ul class="md:ml-9 my-4 list-disc">
-            <li class="font-medium mb-4">Use null when you want to explicitly indicate that a variable or object
-                property has no value.</li>
+            <li class="font-medium mb-4">Use 'null' when you want to indicate that a variable or object have no value.
+            </li>
 
-            <li class="font-medium mb-4">Use undefined when a variable has been declared but not assigned a value, or
-                when you're checking for the absence of a value in an object property or function argument.</li>
+            <li class="font-medium mb-4">Use 'undefined' when you want to indicate that a variable is declared but its
+                property is never assigned or a property of an object is empty.</li>
         </ul>
 
-        <p class="font-bold my-6">It's worth noting that both null and undefined are "falsy" values, meaning they
-            evaluate
-            to false in a
-            boolean context, such as in an if statement. However, they are distinct values with different purposes, so
-            it's important to use them appropriately based on their intended meanings in your code.</p>
+        <p class="font-bold my-6">It's is worth to note that both 'undefined' and 'null' returns a falsy value upon
+            using with conditional statement.</p>
     </section>
 </body>
 
